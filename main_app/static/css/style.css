@@ -1,0 +1,286 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+   
+    /* Use Walter Turncoat font for the whole website */
+    
+    /* Normal weight */
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+.navbar {
+    transition: background-color 0.3s ease-in-out;
+    font-weight: 700;
+}
+
+.brand1 {
+    font-size: 30px;
+    color: #32e6aa;
+    padding-left: 160px; /* Adjust margin to position the brand */
+}
+
+.navbar .nav-item:hover {
+    color: #32e6aa;
+}  
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #32e6aa;
+}
+
+.nav-link {
+    list-style: none;
+    padding: 0;
+    color: black;
+}
+
+.nav-link .nav-item {
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+.search {
+    display: inline-block;
+    position: relative;
+    height: 35px;
+    width: 35px;
+    box-sizing: border-box;
+    margin: 0px 8px 7px 0px;
+    padding: 7px 9px 0px 9px;
+    border: 3px solid #32e6aa;
+    border-radius: 25px;
+    transition: all 200ms ease;
+    cursor: text;
+}
+
+.search:after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 20px;
+    right: -5px;
+    top: 21px;
+    background: #32e6aa;
+    border-radius: 3px;
+    transform: rotate(-45deg);
+    transition: all 200ms ease;
+}
+
+.search.active,
+.search:hover {
+    width: 200px;
+    margin-right: 0px;
+}
+
+.search.active:after,
+.search:hover:after {
+    height: 0px;
+}
+
+.search input {
+    width: 100%;
+    border: none;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    font-size: 15px;
+    color: black;
+    background: transparent;
+    outline-width: 0px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .navbar .navbar-collapse {
+        justify-content: center; /* Center align items on collapse */
+    }
+
+    .col-12.col-lg-auto {
+        flex: 1;
+        display: flex;
+        align-items: center; /* Aligns items vertically */
+    }
+
+    .col-12.col-lg-auto .search {
+        margin-right: 20px; /* Adjust margin as needed */
+    }
+}
+
+
+#Product {
+    text-align: center;
+}
+#Product .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1px;
+    flex-wrap: wrap;
+}
+
+#Product .pro{
+    width: 30%;
+    min-width: 250px;
+    padding: 1px 12px;
+    border: none;
+    
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+#Product .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.12);
+}
+#Product .pro img{
+    width: 100%;
+    
+    
+}
+#Product .pro .desc{
+    text-align: center;
+    padding: 10px 0;
+}
+#Product .pro .desc span{
+    color: #929a98;
+    font-size: 17px;
+}
+#Product .pro .desc h5{
+    padding-top: 7px;
+    
+    color: black;
+    font-size: 20px;
+}
+
+#Product .pro .desc h4{
+    padding-top: 7px;
+    font-size: 19px;
+    color:#32e6aa;
+}
+#Product .pro .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+#txt .slogan{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    
+}
+
+
+#img .imgs{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    text-align: center;
+    width: 100%;
+}
+#long-card{
+    padding-top: 8%;
+}
+
+#long-card .slogan{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+.subscribe-area {
+    border: 3px solid rgb(0, 0, 0); /* Add a white border */
+    border-radius: 10px;
+    background-image: linear-gradient(to top, #5e6263 0%, #000000 100%);
+    }
+    
+    .pb-50 {
+        padding-bottom: 50px;
+    }
+    .pt-70 {
+        padding-top: 70px;
+    }
+    
+    .mb-15 {
+        margin-bottom: 15px;
+    }
+    
+    .subscribe-text span {
+        font-size: 12px;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: 5px;
+    }
+    .subscribe-text h2 {
+        color: #fff;
+        font-size: 36px;
+        font-weight: 300;
+        margin-bottom: 0;
+        margin-top: 6px;
+    }
+    .subscribe-wrapper {
+        overflow: hidden;
+    }
+    .mb-15 {
+        margin-bottom: 15px;
+    }
+
+    .subscribe2-wrapper .subscribe-form input {
+        background: none;
+        border: 1px solid #fff;
+        border-radius: 30px;
+        color: #fff;
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 300;
+        height: 57px;
+        margin-right: 17px;
+        padding-left: 35px;
+        width: 70%;
+        cursor: pointer;
+    }
+     
+    .subscribe2-wrapper .subscribe-form button {
+        background: #ffff;
+        border: none;
+        border-radius: 30px;
+        color: #000000;
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1;
+        padding: 18px 46px;
+        transition: all 0.3s ease 0s;
+    }
+    .subscribe2-wrapper .subscribe-form button i {
+        font-size: 18px;
+        padding-left: 5px;
+    }
+    
+    .custom-button {
+        padding: 15px 30px; /* Adjust the padding to increase the button size */
+        font-size: 1.2em;
+        border-radius: 0px; /* Adjust the font size as needed */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Add a transition effect */
+    }
+    
+    .custom-button:hover {
+        background-color: white; /* Change background color on hover */
+        color: black; /* Change text color on hover */
+    }
+    
+    
+#footer {
+        font-family: Georgia, serif;
+        font-weight: 500;
+      }
+

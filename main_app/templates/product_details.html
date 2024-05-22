@@ -1,0 +1,387 @@
+{% load static %}
+<html>
+  <head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Walter+Turncoat&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Georgia&display=swap">
+    <link rel="stylesheet" href="{% static "css/style.css" %} ">
+    <title>{{product.title}}</title>
+    
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+   <link rel="stylesheet" href="{% static "css/style.css" %} ">
+  </head>
+
+<body>
+  <header>
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-light bg-transparent">
+      <div class="container-fluid d-flex justify-content-between">
+          <a class="brand1" href="{% url "home" %}">Shirtify</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+              <ul class="navbar-nav align-items-center">
+                  <li class="nav-item">
+                      <a class="nav-link mx-2" href="{% url "men-category" %}">Explore</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          Categories
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item nav-item" href="{% url "formals" %}">Formal</a></li>
+                          <li><a class="dropdown-item nav-item" href="{% url "casuals" %}">Casual</a></li>
+                          <li><a class="dropdown-item nav-item" href="{% url "kid" %}">Kids</a></li>
+                          <li><a class="dropdown-item nav-item" href="{% url "occasional" %}">Occasional</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link mx-2" href="#!">Policy</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link mx-2" href="{% url "about" %}">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link mx-2" href=" {% url "contact" %}">Contact Us</a>
+                  </li>
+                  <li class="nav-item">
+                      <div class="cntr">
+                          <div class="cntr-innr">
+                            <form method="get" action="{% url 'search' %}">
+                              <label class="search" for="inpt_search">
+                                <input id="inpt_search" name="q" type="text"  />                              
+                              </label>
+                            </form>
+                          </div>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  
+  </header>
+
+<!-- content -->
+<section class="py-5 mt-5">
+  <div class="container">
+    <div class="row gx-5">
+      <aside class="col-lg-6">
+        <div class="border rounded-4 mb-3 d-flex justify-content-center">
+            <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit" src="{{ product.image.url }}" />
+          </a>
+        </div>
+        <div class="d-flex justify-content-center mb-3">
+          <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image" href="https://mdbcdn.b-cdn.net/img/bootstrap-ecommerce/items/detail1/big1.webp" class="item-thumb">
+            <img width="60" height="60" class="rounded-2" src="https://mdbcdn.b-cdn.net/img/bootstrap-ecommerce/items/detail1/big1.webp" />
+          </a>
+          <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image" href="https://mdbcdn.b-cdn.net/img/bootstrap-ecommerce/items/detail1/big2.webp" class="item-thumb">
+            <img width="60" height="60" class="rounded-2" src="https://mdbcdn.b-cdn.net/img/bootstrap-ecommerce/items/detail1/big2.webp" />
+          </a>
+          <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image" href="https://mdbcdn.b-cdn.net/img/bootstrap-ecommerce/items/detail1/big3.webp" class="item-thumb">
+            <img width="60" height="60" class="rounded-2" src="https://mdbcdn.b-cdn.net/img/bootstrap-ecommerce/items/detail1/big3.webp" />
+          </a>
+          <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image" href="https://mdbcdn.b-cdn.net/img/bootstrap-ecommerce/items/detail1/big4.webp" class="item-thumb">
+            <img width="60" height="60" class="rounded-2" src="https://mdbcdn.b-cdn.net/img/bootstrap-ecommerce/items/detail1/big4.webp" />
+          </a>
+          <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image" href="https://mdbcdn.b-cdn.net/img/bootstrap-ecommerce/items/detail1/big.webp" class="item-thumb">
+            <img width="60" height="60" class="rounded-2" src="https://mdbcdn.b-cdn.net/img/bootstrap-ecommerce/items/detail1/big.webp" />
+          </a>
+        </div>
+        <!-- thumbs-wrap.// -->
+        <!-- gallery-wrap .end// -->
+      </aside>
+      <main class="col-lg-6">
+        <div class="ps-lg-3">
+          <h4 class="title text-dark"><b>
+            {{ product.title }}
+          </b>
+          </h4>
+          <div class="d-flex flex-row my-3">
+            <div class="text-warning mb-1 me-2">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span class="ms-1">
+                4.5
+              </span>
+            </div>
+            <span class="text-muted"><i class="fas fa-shopping-basket fa-sm mx-1"></i>154 orders</span>
+            <span class="text-success ms-2">In stock</span>
+          </div>
+          
+          <div class="mb-3">
+            <span class="h5">{{ product.price }}₹</span>
+          </div>
+          
+          <p>
+            {{ product.description }}
+          </p>
+          
+          <div class="row">
+           
+            
+            
+            
+            <dt class="col-3">Material</dt>
+            <dd class="col-9">{{ product.cloth_material_category }}</dd>
+            
+           
+          </div>
+          
+          <hr />
+          
+          
+          <a href="{{product.url}}" class="btn btn-warning shadow-0"> Buy now </a>
+         
+        </div>
+      </main>
+    </div>
+  </div>
+</section>
+<!-- content -->
+<section id="txt">
+  <div class="slogan">
+
+    <h1>More From Us</h1>
+
+  </div>
+</section>
+
+<section id="long-card"style="position: relative;">
+  <div class="card bg-dark text-white"style="border: none; border-radius: 0;">
+    <div class="slogan">
+      <p class="h6"> Occasional Wear </p>
+      <p class="h3">Our Luxury Collection</p><br>
+
+    </div>
+  </div>
+</section>
+
+
+
+<div class="text-center"> <!-- New div for centering -->
+  <a href="{% url "occasional" %} ">
+    <button class="btn btn-dark mt-5 custom-button">Explore More</button>
+  </a>
+  
+</div>
+
+<section id="long-card"style="position: relative;">
+  <div class="card bg-dark text-white"style="border: none; border-radius: 0;">
+    <div class="slogan">
+      <p class="h6"> Formal / Semi-Formal </p>
+      <p class="h3">Our Classic Collection</p><br>
+
+    </div>
+  </div>
+</section>
+
+
+
+<div class="text-center"> <!-- New div for centering -->
+  <a href="{% url "formals" %} ">
+    <button class="btn btn-dark mt-5 custom-button">Explore More</button>
+  </a>
+  
+</div>
+
+<section id="long-card"style="position: relative;">
+  <div class="card bg-dark text-white"style="border: none; border-radius: 0;">
+    <div class="slogan">
+      <p class="h6"> Smart Casual </p>
+      <p class="h3">Our Casual Collection</p><br>
+
+    </div>
+  </div>
+</section>
+
+
+
+<div class="text-center"> <!-- New div for centering -->
+  <a href="{% url "casuals" %} ">
+    <button class="btn btn-dark mt-5 custom-button">Explore More</button>
+  </a>
+  
+</div>
+
+<section id="long-card"style="position: relative;">
+  <div class="card bg-dark text-white"style="border: none; border-radius: 0;">
+    <div class="slogan">
+      <p class="h6"> Charming Kids </p>
+      <p class="h3">Our Kids Collection</p><br>
+
+    </div>
+  </div>
+</section>
+
+
+
+<div class="text-center"> <!-- New div for centering -->
+  <a href="{% url "kid" %} ">
+    <button class="btn btn-dark mt-5 mb-2 custom-button">Explore More</button>
+  </a>
+  
+</div>
+
+
+<section class="subscribe-area pb-50 pt-70">
+  <div class="container  ">
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class="subscribe-text mb-15">
+          <span>JOIN OUR NEWSLETTER</span>
+          <h2>subscribe newsletter</h2>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="subscribe-wrapper subscribe2-wrapper mb-15">
+          <div class="subscribe-form">
+            <form action="#">
+              <input placeholder="enter your email address" type="email">
+              <button>subscribe <i class="fas fa-long-arrow-alt-right"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- Footer -->
+<footer id="footer" class="text-center text-lg-start bg-dark text-light">
+  <!-- Section: Social media -->
+  <section class="d-flex mt-2 justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>
+        <h3>Get connected with us on social networks:</h3>
+      </span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Shirtify
+          </h6>
+          <p>
+            Shirtify, established in 2024, offers a diverse selection of high-quality shirts at affordable prices.
+            Elevate your wardrobe with our stylish and comfortable designs tailored to suit every occasion.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Our Product Contains
+          </h6>
+          <p>
+            Quality
+          </p>
+          <p>
+            Style
+          </p>
+          <p>
+            Budget
+          </p>
+          <p>
+            Addiction
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="{% url "home" %} " class="text-reset">Home</a>
+          </p>
+          <p>
+            <a href="{% url "men-category" %}" class="text-reset">Categories</a>
+          </p>
+          <p>
+            <a href="{% url "about" %}" class="text-reset">About</a>
+          </p>
+          <p>
+            <a href="{% url "contact" %}" class="text-reset">Contact</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i> Shahad, Kamba Village, Wagherapada</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@shirtify.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 91 9702383848</p>
+          <p><i class="fas fa-print me-3"></i> + 91 9920767150</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2024 Copyright:
+    <a class="text-reset fw-bold" href="#">Shirtify.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/#[[latestVersion]]#/mdb.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script src="{% static "js/script.js" %} "></script>
+</body>
+</html>
